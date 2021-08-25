@@ -24,7 +24,7 @@ namespace DataAccess.RabbitMQ
             var messageInBytes = GetMessageAsBytes(message);
             var properties = GetPublisherProperties();
 
-            _client.Channel.BasicPublish(null, _client.BrokerName, properties, messageInBytes);
+            _client.Channel.BasicPublish("", _client.BrokerName, properties, messageInBytes);
         }
         private IBasicProperties GetPublisherProperties()
         {

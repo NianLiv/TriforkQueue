@@ -7,6 +7,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Contracts", "Core.Cont
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.RabbitMQ", "DataAccess.RabbitMQ\DataAccess.RabbitMQ.csproj", "{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProducer", "TaskProducer\TaskProducer.csproj", "{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Entities", "Core.Entities\Core.Entities.csproj", "{4547448C-495C-491F-853C-3FE17F0A7811}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +25,14 @@ Global
 		{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4547448C-495C-491F-853C-3FE17F0A7811}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4547448C-495C-491F-853C-3FE17F0A7811}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4547448C-495C-491F-853C-3FE17F0A7811}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4547448C-495C-491F-853C-3FE17F0A7811}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
