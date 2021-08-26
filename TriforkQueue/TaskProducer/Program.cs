@@ -1,6 +1,7 @@
-﻿using Core.Entities.Task;
+﻿using Core.Entities.ToDoTasks;
 using DataAccess.RabbitMQ;
 using RabbitMQ.Client;
+using System.Threading;
 
 namespace TaskProducer
 {
@@ -8,6 +9,9 @@ namespace TaskProducer
     {
         static void Main(string[] args)
         {
+            // SOME FANCY FACTORIES HERE:
+                // AND ENVIRONMENT VARIABLES
+
             var factory = new ConnectionFactory
             {
                 HostName = "localhost"
@@ -15,15 +19,15 @@ namespace TaskProducer
 
             var client = new RabbitMqClient(factory, "TaskQueue");
 
-            var producer = new RabbitMqProducer<TaskMessage>(client);
+            var producer = new RabbitMqProducer<ToDoTaskMessage>(client);
 
-            var taskMsg = new TaskMessage
-            {
-                Title = "Task one",
-                Objective = "Do this and do that."
-            };
+            var taskCreator = new ToDoTaskMessageCreator(producer);
 
-            producer.Publish(taskMsg);
+            taskCreator.Start();
+
+            Thread.Sleep(5000);
+
+            taskCreator.Stop();
         }
     }
 }

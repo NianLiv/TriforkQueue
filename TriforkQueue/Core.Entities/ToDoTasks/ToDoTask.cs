@@ -1,6 +1,6 @@
-﻿namespace Core.Entities.Task
+﻿namespace Core.Entities.ToDoTasks
 {
-    public class Task
+    public class ToDoTask : Entity
     {
         public string Title { get; set; }
         public string Objective { get; set; }

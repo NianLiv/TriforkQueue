@@ -1,4 +1,5 @@
 ﻿using Core.Contracts.MessageBroker;
+using Core.Entities;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 using System;
@@ -7,7 +8,7 @@ using System.Text;
 namespace DataAccess.RabbitMQ
 {
 
-    public class RabbitMqProducer<T> : IProducer<T> where T : IMessage
+    public class RabbitMqProducer<T> : IProducer<T> where T : Message
     {
         private readonly RabbitMqClient _client;
         public IBrokerClient Client => _client;
@@ -19,22 +20,28 @@ namespace DataAccess.RabbitMQ
 
         public void Publish(T message)
         {
-            _client.ConnectToBroker();
-
             var messageInBytes = GetMessageAsBytes(message);
             var properties = GetPublisherProperties();
 
+            SetTimestampToNow(message);
+
             _client.Channel.BasicPublish("", _client.BrokerName, properties, messageInBytes);
+            Console.WriteLine($"Publishing a message at: {message.Timestamp}");
         }
+
+        private void SetTimestampToNow(T message)
+        {
+            message.Timestamp = DateTime.Now;
+        }
+
         private IBasicProperties GetPublisherProperties()
         {
             var properties = _client.Channel.CreateBasicProperties();
-            properties.Timestamp = new AmqpTimestamp(DateTime.Now.Second);
             properties.Persistent = true;   // Allows multiple consumers.
             return properties;
         }
 
-        private static byte[] GetMessageAsBytes(IMessage message)
+        private static byte[] GetMessageAsBytes(Message message)
         {
             return Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message));
         }

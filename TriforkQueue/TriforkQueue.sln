@@ -3,13 +3,19 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Contracts", "Core.Contracts\Core.Contracts.csproj", "{F6176A2F-CE8E-4967-97BA-B20694EBCD72}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Contracts", "Core.Contracts\Core.Contracts.csproj", "{F6176A2F-CE8E-4967-97BA-B20694EBCD72}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.RabbitMQ", "DataAccess.RabbitMQ\DataAccess.RabbitMQ.csproj", "{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataAccess.RabbitMQ", "DataAccess.RabbitMQ\DataAccess.RabbitMQ.csproj", "{C6DE4888-BB8A-48EC-99B4-F66C557E4FBE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskProducer", "TaskProducer\TaskProducer.csproj", "{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TaskProducer", "TaskProducer\TaskProducer.csproj", "{49A5ED1D-7960-40C9-93C2-B55789DBB9D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.Entities", "Core.Entities\Core.Entities.csproj", "{4547448C-495C-491F-853C-3FE17F0A7811}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Entities", "Core.Entities\Core.Entities.csproj", "{4547448C-495C-491F-853C-3FE17F0A7811}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskConsumer", "TaskConsumer\TaskConsumer.csproj", "{E16E4D54-6669-4509-8256-285D4CFCB4BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess.MongoDB", "DataAccess.MongoDB\DataAccess.MongoDB.csproj", "{866FD88B-2127-4DB7-A8F9-B17CA9EC65C4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business", "Business\Business.csproj", "{FEA36CE2-85C5-4704-9BA6-DB729765FEC2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +39,18 @@ Global
 		{4547448C-495C-491F-853C-3FE17F0A7811}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4547448C-495C-491F-853C-3FE17F0A7811}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4547448C-495C-491F-853C-3FE17F0A7811}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E16E4D54-6669-4509-8256-285D4CFCB4BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E16E4D54-6669-4509-8256-285D4CFCB4BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E16E4D54-6669-4509-8256-285D4CFCB4BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E16E4D54-6669-4509-8256-285D4CFCB4BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{866FD88B-2127-4DB7-A8F9-B17CA9EC65C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{866FD88B-2127-4DB7-A8F9-B17CA9EC65C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{866FD88B-2127-4DB7-A8F9-B17CA9EC65C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{866FD88B-2127-4DB7-A8F9-B17CA9EC65C4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEA36CE2-85C5-4704-9BA6-DB729765FEC2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEA36CE2-85C5-4704-9BA6-DB729765FEC2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEA36CE2-85C5-4704-9BA6-DB729765FEC2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEA36CE2-85C5-4704-9BA6-DB729765FEC2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -16,6 +16,8 @@ namespace DataAccess.RabbitMQ
         {
             _connectionFactory = connectionFactory;
             BrokerName = queueName;
+
+            ConnectToBroker();
         }
 
         public void ConnectToBroker()
